@@ -34,11 +34,3 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	}
 	return q
 }
-
-func toLink([]int) *ListNode {
-
-}
-
-func toArray(l *ListNode) []int {
-
-}
