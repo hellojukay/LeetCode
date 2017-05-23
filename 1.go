@@ -1,4 +1,4 @@
-package tow_sum
+package main
 
 func twoSum(nums []int, target int) []int {
 	var v1, v2 int
