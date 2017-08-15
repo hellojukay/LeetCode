@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// 效率低，测试不通过
 // func myPow(x float64, n int) float64 {
 // 	if n < 0 {
 // 		x = 1 / x
@@ -28,6 +29,7 @@ func myPow(x float64, n int) float64 {
 	}
 	return x * myPow(x, n-1)
 }
+
 func main() {
 	fmt.Print(myPow(2.0, 3))
 }
