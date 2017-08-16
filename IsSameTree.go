@@ -4,20 +4,22 @@ import (
 	"fmt"
 )
 
-
 type TreeNode struct {
-      Val int
-     Left *TreeNode
-     Right *TreeNode
- }
- 
-func isSameTree(p *TreeNode, q *TreeNode) bool {
-    if p == q{
-		return true
-	}
-	return p.Left == q.Left && p.Right == q.Right && isSameTree(p.Left,q.Left) && isSameTree(p.Right,q.Right)
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
 }
 
-func main(){
-	fmt.Println(isSameTree(nil,nil))
+func isSameTree(p *TreeNode, q *TreeNode) bool {
+	if (p == nil) && (q == nil) {
+		return true
+	}
+	if (q == nil) || (p == nil) {
+		return false
+	}
+	return p.Val == q.Val && isSameTree(p.Left, q.Left) && isSameTree(p.Right, q.Right)
+}
+
+func main() {
+	fmt.Println(isSameTree(nil, nil))
 }
